@@ -1,0 +1,62 @@
+.phones{
+	ul {
+	list-style: none;
+	font-size: 0px;
+	margin-left: -2.5%; /* should match li left margin */
+
+	}
+	ul, li {
+	display: inline-block;
+	font-weight: 300;
+	padding: 10px;
+	margin: 0 0 2.5% 2.5%;
+	background: #fff;
+	font-size:13px;
+	vertical-align: top;
+	box-shadow: 0 0 5px #ddd;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+
+	}
+	a {
+		color: $green;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 10px;
+		text-decoration: none;
+		line-height: 20px;
+	}
+}
+.thumbnail {
+	width: 300px;
+	height: 220px;
+	margin: 10px 10px;
+	padding: 10px 10px;
+
+	img {
+		width: 100px;
+		height: 100px;
+		line-height:10px;
+	}
+}
+	
+
+@media (max-width: 480px) {
+	ul.grid-nav li {
+		display: block;
+		margin: 0 0 5px;
+	}
+	ul.grid-nav li a {
+		display: block;
+	}
+	.phones {
+		ul {
+			margin-left: 0;
+		}
+		ul, li {
+			width: 100% !important; 
+			margin: 0 -15px 20px;
+		}
+	}	
+}

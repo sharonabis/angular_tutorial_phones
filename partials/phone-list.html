@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div class="row">
+      <header>
+            <h1>My Shop</h1>
+            <p>Search: <input ng-model="query"> </p>
+      </header>
+    </div>
+    
+    <div class ="row">
+        <div class ="sort">
+          Sort by:
+          <select ng-model="orderProp">
+              <option value="name">Alphabetical</option>
+              <option value="age">Newest</option>
+          </select>
+        </div>
+
+      <ul class="phones">
+        <li ng-repeat="phone in phones | filter:quesry | orderBy:orderProp"
+            class="thumbnail phone-listing">
+          <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>
+          <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
+          <p>{{phone.snippet}}</p>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
